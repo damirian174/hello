@@ -1,0 +1,82 @@
+import random
+import time
+
+print('морской бой"')
+f = ['a1','a2','a3','a4','a5','b1','b2','b3','b4','b5','c1','c2','c3','c4','c5', 'd1','d2','d3','d4','d5','e1','e2','e3','e4','e5']
+
+list_user = []
+list_bot = []
+listgame = []
+print('Создайте свой флот')
+g = input()
+list_user.append(g)
+h = input()
+list_user.append(h)
+j = input()
+list_user.append(j)
+k = input()
+list_user.append(k)
+l = input()
+list_user.append(l)
+
+for i in range(5):
+    x = random.choice(f)
+    list_bot.append(x)
+    i = i+i
+while True:
+
+    for i in list_bot:
+        while list_bot.count(i) > 1:
+            list_bot.remove(i)
+            x = random.choice(f)
+            list_bot.append(x)
+    if len(list_bot)==5:
+        break
+print(list_bot)
+while True:
+    print('Ваш ход')
+    a = input()
+    if a == list_bot[0]:
+        print('вы попали')
+    elif a == list_bot[1]:
+        print('вы попали')
+    elif a == list_bot[2]:
+        print('вы попали')
+    elif a == list_bot[3]:
+        print('вы попали')
+    elif a == list_bot[4]:
+        print('вы попали')
+    else:
+        print('мимо')
+    print(list_bot)
+    print('Ход компьютера')
+    time.sleep(5)
+    s = random.choice(f)
+    if s ==g:
+        print(s)
+        print('корабль утонул')
+    elif s ==h:
+        print(s)
+        print('корабль утонул')
+    elif s ==j:
+        print(s)
+        print('корабль утонул')
+    elif s ==k:
+        print(s)
+        print('корабль утонул')
+    elif s ==l: 
+        print(s)
+        print('корабль утонул')
+    else:
+        print(s)
+        print('мимо')
+
+    list_bot == listgame
+    print(listgame)
+    if len(listgame) ==5:
+        list_bot==listgame
+        break
+print('игра окончена')
+    
+    
+
